@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledCastItem = styled.li `
+export const StyledActorsItem = styled.li `
 width: 200px;
   min-height: 410px;
   text-align: center;

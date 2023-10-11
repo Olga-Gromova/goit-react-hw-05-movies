@@ -1,4 +1,4 @@
-import CastList from 'components/CastList/CastList';
+import ActorsList from 'components/ActorsList/ActorsList';
 import FoundError from 'components/FoundError/FoundError';
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
@@ -30,7 +30,7 @@ const Cast = () => {
     return (
         <div>
             <div>
-                {loading && <CastList cast={cast}/>}
+                {loading && <ActorsList cast={cast}/>}
                 {error && <FoundError />}
             </div>
         </div>

@@ -3,11 +3,13 @@ import styled from 'styled-components';
 export const StyledHomeList = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 24px;
+  justify-content: center;
+ 
 
   li {
-    width: 200px;
+    width: calc((100% - 30px)/3);
+    marging-left: 10px;
+
     font-size: 22px;
     transition: all 350ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover {

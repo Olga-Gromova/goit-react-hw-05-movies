@@ -5,6 +5,7 @@ import Loader from 'components/Loader/Loader';
 
 import MovieList from 'components/MovieList/MovieList';
 
+
 import React, { Suspense, useEffect, useState } from 'react';
 import { Outlet, useParams } from 'react-router-dom';
 import { getMoveDetails } from 'services/api';
@@ -38,6 +39,8 @@ const MovieDetails = () => {
   return (
     <>
       <Section>
+
+
         <Container>
           {error && <FoundError />}
           {loading ? <MovieList movie={movie} /> : <Loader />}

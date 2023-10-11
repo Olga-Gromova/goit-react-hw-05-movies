@@ -10,7 +10,9 @@ const SearchedMoviesList = ({ movies }) => {
     <>
       <StyledSearchedList>
         {movies.map(({ title, id, poster_path }) => (
+    
           <li key={id}>
+            <div>
             <Link to={`${id}`} state={{ from: location }}>
               {/* <img src={`${BASE_IMG}${poster_path}`} alt={title} /> */}
 
@@ -23,9 +25,17 @@ const SearchedMoviesList = ({ movies }) => {
                               />
 
               {/* {title && title.substring(0, 18)} */}
-            </Link>
+              </Link>
+            </div>
+            <div>
+              <Link to={`${id}`} state={{ from: location }}></Link>
+              <h4>{title ? `${title}` : `Please, see title on the poster`}</h4></div>
+            
+    
           </li>
+         
         ))}
+        
       </StyledSearchedList>
     </>
   );

@@ -1,16 +1,16 @@
-import CastItem from 'components/CastItem/CastItem';
-import { StyledCastList } from './CastList.styled';
+import ActorsItem from 'components/ActorsItem/Actorstem';
+import { StyledActorsList } from './ActorsList.styled';
 
-const CastList = ({ cast }) => {
+const ActorsList = ({ cast }) => {
     const set = new Set();
     return (
-      <StyledCastList>
+      <StyledActorsList>
         {cast &&
           cast.map(({ id, name, profile_path, character }) => {
             if (!set.has(id)) {
               set.add(id);
               return (
-                <CastItem
+                <ActorsItem
                   key={id}
                   name={name}
                   profile_path={profile_path}
@@ -21,8 +21,8 @@ const CastList = ({ cast }) => {
               return null;
             }
           })}
-      </StyledCastList>
+      </StyledActorsList>
     );
   };
   
-  export default CastList;
+  export default ActorsList;

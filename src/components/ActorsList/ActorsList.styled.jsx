@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledCastList = styled.ul `
+export const StyledActorsList = styled.ul `
 display: flex;
   flex-wrap: wrap;
   justify-content: center;

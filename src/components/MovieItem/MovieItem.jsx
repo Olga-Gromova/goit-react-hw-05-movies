@@ -19,18 +19,14 @@ const MoviItem = ({ movie }) => {
   return (
     <>
       <StyledLink to={ref.current}>Go back</StyledLink>
+   
       <StyledWrrap>
         {/* <img src={`${BASE_IMG}${poster_path}`} alt={title} /> */}
-         <img
-            src={
-              poster_path
-                ? `${BASE_IMG}${poster_path}`
-                : ImageComingSoon
-            }
-            // className="card-img-top"
-            alt={title}
-          />
-
+        <img
+          src={poster_path ? `${BASE_IMG}${poster_path}` : ImageComingSoon}
+          alt={title}
+        />
+        <h2>{title ? `${title}` : `Please, see the title on the poster`}</h2>
 
         {vote_average && (
           <StyledSpan rating={vote_average}>
@@ -40,7 +36,6 @@ const MoviItem = ({ movie }) => {
         )}
       </StyledWrrap>
       <StyledlWrrapDetails>
-        <h2>{title}</h2>
         <p>Release date: {release_date}</p>
         <h3>Overview</h3>
         <p>{overview} </p>
