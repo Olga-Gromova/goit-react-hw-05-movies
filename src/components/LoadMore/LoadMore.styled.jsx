@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 
-
 export const StyledButton = styled.button`
   padding: 8px 16px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 2px;
-  background-color: #000;
+  background-color: #ffbb5c;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
   display: block;
@@ -22,6 +21,6 @@ export const StyledButton = styled.button`
 
   &:hover,
   &:focus {
-    background-color: #000;
+    background-color: #e25e3e;
   }
 `;

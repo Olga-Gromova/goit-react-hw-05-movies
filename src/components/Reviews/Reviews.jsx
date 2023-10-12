@@ -1,9 +1,8 @@
-import { Container, Section } from 'App.styled';
+import { Container } from 'App.styled';
 import ReviewsList from 'components/ReviewsList/ReviewsList';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getReviewMovie } from 'services/api';
-// import ReviewsList from '../ReviewsList/ReviewsList';
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
@@ -28,7 +27,7 @@ const Reviews = () => {
   return (
     <>
       {loading && (
-        <Section>
+        <div>
           <Container>
             {reviews.length === 0 ? (
               <h3>No reviews</h3>
@@ -36,7 +35,7 @@ const Reviews = () => {
               <ReviewsList reviews={reviews} />
             )}
           </Container>
-        </Section>
+        </div>
       )}
     </>
   );

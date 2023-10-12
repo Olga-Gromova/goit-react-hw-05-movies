@@ -1,11 +1,11 @@
-import ReviewsItem from '../ReviewsItem/ReviewsItem';
+import ReviewsCard from '../Cards/ReviewsCard';
 import { StyledListReviews } from './ReviewsList.styled';
 
 const ReviewsList = ({ reviews }) => {
   return (
     <StyledListReviews>
       {reviews.map(({ id, author, content }) => (
-        <ReviewsItem key={id} author={author} content={content} />
+        <ReviewsCard key={id} author={author} content={content} />
       ))}
     </StyledListReviews>
   );

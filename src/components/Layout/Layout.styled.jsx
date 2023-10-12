@@ -1,40 +1,36 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { ImFilm } from "react-icons/im";
-import {FaDAndD} from "react-icons/fa";
-
+import { ImFilm } from 'react-icons/im';
+import { FaDAndD } from 'react-icons/fa';
 
 export const StyledHeader = styled.header`
-  background-color: #b6c6bc;
-  /* border-bottom: 1px solid #eee; */
-  padding: 0 20px;
+  background-color: #ffbb5c;
+  font-size: 24px;
+  font-weight: 500;
+
   nav {
     display: flex;
     align-items: center;
   }
+
   a {
     text-decoration: none;
-    font-size: 20px;
-    font-weight: 500;
   }
 
   ul {
     display: flex;
     gap: 24px;
-    margin-left: 172px;
+    margin: 0px auto 0px auto;
 
-    li {
-    }
     a {
       position: relative;
-      padding: 24px 0;
       display: block;
       color: #000;
       transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
       &:hover,
       &:focus,
       &:active {
-        color: #600000;
+        color: #e25e3e;
       }
       &::after {
         position: absolute;
@@ -43,7 +39,7 @@ export const StyledHeader = styled.header`
         bottom: 0;
         width: 100%;
         height: 4px;
-        background-color: #600000;
+        background-color: #e25e3e;
         border-radius: 4px;
 
         transform: scaleX(0);
@@ -69,11 +65,10 @@ export const StyledLink = styled(Link)`
 `;
 
 export const StyledImFilm = styled(ImFilm)`
-color: green;
-margin: 10px;
+  color: grey;
+  margin: 10px;
 `;
 
 export const StyledFaDAndD = styled(FaDAndD)`
-
-margin: 5px;
+  margin: 5px;
 `;

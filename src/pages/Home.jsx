@@ -1,9 +1,9 @@
-import { Container, Section } from '../App.styled';
+import { Container } from '../App.styled';
 import FoundError from '../components/FoundError/FoundError';
-import HomeList from 'components/HomeList/HomeList';
+import HomeList from 'components/GalleryList/HomeList';
 import Loader from '../components/Loader/Loader';
 import { useEffect, useState } from 'react';
-import ScrollToTop from "react-scroll-to-top";
+import ScrollToTop from 'react-scroll-to-top';
 
 import { getMovies } from 'services/api';
 
@@ -28,14 +28,14 @@ const Home = () => {
   }, []);
 
   return (
-    <Section>
+    <div>
       <Container>
         <h1>Popular movies of the day! </h1>
         {error && <FoundError />}
         {loading ? <HomeList movies={movies} /> : <Loader />}
       </Container>
       <ScrollToTop smooth />
-    </Section>
+    </div>
   );
 };
 

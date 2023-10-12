@@ -1,21 +1,22 @@
-import { Vortex } from 'react-loader-spinner';
+import { ThreeCircles } from 'react-loader-spinner';
+import { StyledDiv } from './Loader.styled';
 
 const Loader = () => {
-    return (
-  <div>
-    <Vortex
-      visible={true}
-      height="80"
-      width="80"
-      ariaLabel="vortex-loading"
-      wrapperStyle={{
-        position: 'absolute',
-        left: '50%',
-      }}
-      wrapperClass="vortex-wrapper"
-      colors={['red', 'green', 'blue', 'yellow', 'orange', 'purple']}
-    />
-  </div>
-);
+  return (
+    <StyledDiv>
+      <ThreeCircles
+        height="100"
+        width="100"
+        color="#FF9B50"
+        wrapperStyle={{}}
+        wrapperClass=""
+        visible={true}
+        ariaLabel="three-circles-rotating"
+        outerCircleColor=""
+        innerCircleColor=""
+        middleCircleColor=""
+      />
+    </StyledDiv>
+  );
 };
 export default Loader;

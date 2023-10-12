@@ -16,3 +16,12 @@ ul,
 li {
   list-style: none;
 }
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}

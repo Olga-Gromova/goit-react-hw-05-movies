@@ -5,6 +5,7 @@ export const StyledWrrap = styled.div`
   position: relative;
   border: 1px solid #eee;
 `;
+
 export const StyledSpan = styled.span`
   position: absolute;
   bottom: 5px;
@@ -17,16 +18,9 @@ export const StyledSpan = styled.span`
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 4px solid
-    ${({ rating }) => {
-      if (rating <= 5) {
-        return 'red';
-      } else if (rating < 7) {
-        return 'orange';
-      }
-      return 'green';
-    }};
+  border: 4px solid;
 `;
+
 export const StyledlWrrapDetails = styled.div`
   display: flex;
   flex-direction: column;
@@ -58,5 +52,23 @@ export const StyledLink = styled(Link)`
   &:focus {
     background: #ee0000;
     color: #fff;
+  }
+`;
+
+export const StyledActorsItem = styled.li`
+  width: 200px;
+  min-height: 410px;
+  text-align: center;
+
+  img {
+    border: 1px solid #eee;
+    width: 200px;
+    height: 300px;
+  }
+  h2 {
+    margin-bottom: 8px;
+  }
+  p {
+    font-size: 18px;
   }
 `;

@@ -1,13 +1,13 @@
-import { Container, Section } from '../App.styled';
+import { Container } from '../App.styled';
 
 import FoundError from 'components/FoundError/FoundError';
 import Loader from 'components/Loader/Loader';
 
-import MovieList from 'components/MovieList/MovieList';
+import MovieDetailed from 'components/MovieDetailed/MovieDetailed';
+import { ReturnBack } from 'components/ReturnBack/ReturnBack';
 
-
-import React, { Suspense, useEffect, useState } from 'react';
-import { Outlet, useParams } from 'react-router-dom';
+import React, { Suspense, useEffect, useState, useRef } from 'react';
+import { Outlet, useParams, useLocation } from 'react-router-dom';
 import { getMoveDetails } from 'services/api';
 
 const MovieDetails = () => {
@@ -15,6 +15,8 @@ const MovieDetails = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const { movieId } = useParams();
+  const location = useLocation();
+  const backLinkLocationRef = useRef(location.state?.from ?? '/movies');
 
   useEffect(() => {
     const detail = async id => {
@@ -38,14 +40,14 @@ const MovieDetails = () => {
 
   return (
     <>
-      <Section>
-
+      <div>
+        <ReturnBack backLinkLocationRef={backLinkLocationRef.current} />
 
         <Container>
           {error && <FoundError />}
-          {loading ? <MovieList movie={movie} /> : <Loader />}
+          {loading ? <MovieDetailed movie={movie} /> : <Loader />}
         </Container>
-      </Section>
+      </div>
       <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>

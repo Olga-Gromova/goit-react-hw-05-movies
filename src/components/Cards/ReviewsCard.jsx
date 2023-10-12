@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ReviewsItem = ({ author, content }) => {
+const ReviewsCard = ({ author, content }) => {
   return (
     <li>
       <p>
@@ -12,4 +12,4 @@ const ReviewsItem = ({ author, content }) => {
   );
 };
 
-export default ReviewsItem;
+export default ReviewsCard;

@@ -1,6 +1,5 @@
 import { StyledLabel } from './SearchFormMovies.styled';
 
-
 const SearchFormMovies = ({ handleQuery, queryParam, setPage }) => {
   const onSearch = e => {
     const query = e.target.value;

@@ -1,19 +1,14 @@
-import { Container } from '../App.styled'
-import FoundError from 'components/FoundError/FoundError';
-import LoadMore from 'components/LoadMore/LoadMore';
-import Loader from 'components/Loader/Loader';
-
-
-import SearchFormMovies from 'components/SearchFormMovies/SearchFormMovies';
-
-import SearchedMoviesList from 'components/SearchedMoviesList/SearchedMoviesList';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { getSearchMovies } from 'services/api';
+import { Container } from '../App.styled';
+import FoundError from 'components/FoundError/FoundError';
+import LoadMore from 'components/LoadMore/LoadMore';
+import Loader from 'components/Loader/Loader';
+import SearchFormMovies from 'components/SearchFormMovies/SearchFormMovies';
+import SearchedMoviesList from 'components/GalleryList/SearchedMoviesList';
 import { scrollToBottom } from '../utilits/scroll';
-import ScrollToTop from "react-scroll-to-top";
-
-
+import ScrollToTop from 'react-scroll-to-top';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -45,6 +40,7 @@ const Movies = () => {
         console.log(error);
         setError(true);
         setLoading(true);
+        setLoadMore(false);
       }
     };
     searchMovie(queryParam, page);
@@ -77,8 +73,6 @@ const Movies = () => {
           </>
         )}
         {error && <FoundError />}
-       
-
       </Container>
       <ScrollToTop smooth />
     </section>

@@ -1,14 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { FaArrowLeft } from 'react-icons/fa';
+import { StyledDiv, StyledFaArrowLeft, StyledLink } from './ReturnBack.styled';
 
 export const ReturnBack = ({ backLinkLocationRef }) => {
   return (
-    <div>
-      <Link to={backLinkLocationRef}>
-        <FaArrowLeft />
+    <StyledDiv>
+      <StyledLink to={backLinkLocationRef}>
+        <StyledFaArrowLeft />
         <span> Go back</span>
-      </Link>
-    </div>
+      </StyledLink>
+    </StyledDiv>
   );
 };

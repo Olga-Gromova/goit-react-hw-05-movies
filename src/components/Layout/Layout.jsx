@@ -1,12 +1,13 @@
 import React, { Suspense } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
-import { StyledFaDAndD, StyledHeader, StyledImFilm, StyledLink } from './Layout.styled';
+import {
+  StyledFaDAndD,
+  StyledHeader,
+  StyledImFilm,
+  StyledLink,
+} from './Layout.styled';
 import { Container } from 'App.styled';
 import Loader from 'components/Loader/Loader';
-// import {FaDAndD} from "react-icons/fa";
-
-
-
 
 const Layout = () => {
   return (
@@ -17,7 +18,6 @@ const Layout = () => {
             <StyledLink to="/">
               <span>Movies</span>
               <StyledImFilm />
-              
               <span>Searching</span>
               <StyledFaDAndD />
               <span>Storing</span>
@@ -38,7 +38,6 @@ const Layout = () => {
           <Outlet />
         </Suspense>
       </main>
-      {/* <Footer>Footer</Footer> */}
     </>
   );
 };
