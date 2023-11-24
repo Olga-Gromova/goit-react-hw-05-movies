@@ -1,6 +1,8 @@
 import { useLocation } from 'react-router-dom';
 import {
+  StyledDiv,
   StyledLink,
+  StyledList,
   StyledSpan,
   StyledWrrap,
   StyledlWrrapDetails,
@@ -11,7 +13,7 @@ const BASE_IMG = 'https://image.tmdb.org/t/p/w300';
 
 const MovieDetailedCard = ({ movie }) => {
   const location = useLocation();
-  // const ref = useRef(location.state?.from ?? '/');
+
   const {
     id,
     title,
@@ -22,8 +24,7 @@ const MovieDetailedCard = ({ movie }) => {
     poster_path,
   } = movie;
   return (
-    <>
-      {/* <StyledLink to={ref.current}>Go back</StyledLink> */}
+    <StyledDiv>
       <StyledLink to={`/movies/${id}`} state={{ from: location }}></StyledLink>
 
       <StyledWrrap>
@@ -40,11 +41,11 @@ const MovieDetailedCard = ({ movie }) => {
         <h3>Overview</h3>
         <p>{overview} </p>
         <h4>Genres</h4>
-        <ul>
+        <StyledList>
           {genres && genres.map(({ id, name }) => <li key={id}>{name}</li>)}
-        </ul>
+        </StyledList>
       </StyledlWrrapDetails>
-    </>
+    </StyledDiv>
   );
 };
 

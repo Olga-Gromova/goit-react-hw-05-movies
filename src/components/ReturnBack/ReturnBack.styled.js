@@ -10,6 +10,8 @@ font-size: 24px;
   font-weight: 500;
   width: max-content;
 
+  
+
   a {
     text-decoration: none;
   }

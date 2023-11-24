@@ -74,7 +74,7 @@ const Movies = () => {
         )}
         {error && <FoundError />}
       </Container>
-      <ScrollToTop smooth />
+      <ScrollToTop smooth style={{ width: "40px", height: "40px", borderRadius: "50%", backgroundColor: "#ffbb5c" }}/>
     </section>
   );
 };

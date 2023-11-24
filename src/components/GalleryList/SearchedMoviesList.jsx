@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { StyledDiv, StyledGalleryList } from './GalleryList.styled';
 import ImageComingSoon from '../../images/ImageComingSoon.png';
-import { StyledGalleryList } from './GalleryList.styled';
 const BASE_IMG = 'https://image.tmdb.org/t/p/w200';
 
 const SearchedMoviesList = ({ movies }) => {
@@ -11,7 +11,7 @@ const SearchedMoviesList = ({ movies }) => {
       <StyledGalleryList>
         {movies.map(({ title, id, poster_path }) => (
           <li key={id}>
-            <div>
+            <StyledDiv>
               <Link to={`${id}`} state={{ from: location }}>
                 <img
                   src={
@@ -20,11 +20,8 @@ const SearchedMoviesList = ({ movies }) => {
                   alt={title}
                 />
               </Link>
-            </div>
-            <div>
-              <Link to={`${id}`} state={{ from: location }}></Link>
               <h4>{title ? `${title}` : `Please, see title on the poster`}</h4>
-            </div>
+            </StyledDiv>
           </li>
         ))}
       </StyledGalleryList>

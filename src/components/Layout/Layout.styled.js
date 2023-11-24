@@ -5,12 +5,21 @@ import { FaDAndD } from 'react-icons/fa';
 
 export const StyledHeader = styled.header`
   background-color: #ffbb5c;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 500;
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
 
   nav {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (min-width: 320px) {
+      align-items: center;
+    }
   }
 
   a {
@@ -19,8 +28,12 @@ export const StyledHeader = styled.header`
 
   ul {
     display: flex;
-    gap: 24px;
+    gap: 10px;
     margin: 0px auto 0px auto;
+    @media (min-width: 768px) {
+      gap: 24px;
+      margin-right: 0px;
+    }
 
     a {
       position: relative;
@@ -59,8 +72,11 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
   color: #000;
   span {
-    font-size: 24px;
+    font-size: 18px;
     text-transform: uppercase;
+    @media (min-width: 768px) {
+      font-size: 24px;
+    }
   }
 `;
 
